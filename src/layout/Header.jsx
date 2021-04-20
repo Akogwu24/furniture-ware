@@ -4,6 +4,8 @@ import logo from '../assets/icons/logo.jpg';
 import searchIcon from '../assets/icons/search.svg';
 import user from '../assets/icons/user.svg';
 import cart from '../assets/icons/shopping-bag.svg';
+import menu from '../assets/icons/menu.svg';
+import dropDownArrow from '../assets/icons/down-arrow.svg';
 
 const Header = () => {
   return (
@@ -19,6 +21,13 @@ const Header = () => {
             <img src={user} alt='user' />
             <img src={cart} alt='user' />
           </AvaterShoppingBag>
+        </Row>
+        <Row>
+          <BrowseCategories>
+            <img src={menu} alt='hamburger-menu' />
+            <p>Browse Categories</p>
+            <img src={dropDownArrow} alt='drop-down-arrow' />
+          </BrowseCategories>
         </Row>
       </Wrapper>
     </MyHeader>
@@ -68,4 +77,10 @@ const AvaterShoppingBag = styled.div`
     margin-right: 20px;
     width: 3.5rem;
   }
+`;
+
+const BrowseCategories = styled.div`
+  width: 100px;
+  height: 10px;
+  background-color: red;
 `;
