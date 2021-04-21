@@ -103,6 +103,12 @@ const BrowseCategories = styled.div`
   color: white;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+
+  :hover {
+    background-color: #6d632d;
+  }
 
   img:first-of-type {
     transform: rotate(180deg);
