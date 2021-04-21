@@ -22,13 +22,25 @@ const Header = () => {
             <img src={cart} alt='user' />
           </AvaterShoppingBag>
         </Row>
-        <Row>
+        <SecondRow>
           <BrowseCategories>
             <img src={menu} alt='hamburger-menu' />
             <p>Browse Categories</p>
             <img src={dropDownArrow} alt='drop-down-arrow' />
           </BrowseCategories>
-        </Row>
+          <Nav>
+            <ul>
+              <a href='#'>Home</a>
+              <a href='#'>Events</a>
+              <a href='#'>Gallery</a>
+              <a href='#'>Our Services</a>
+              <a href='#'>About Us</a>
+            </ul>
+          </Nav>
+          <Small>
+            <a href='#'>Help Center</a>
+          </Small>
+        </SecondRow>
       </Wrapper>
     </MyHeader>
   );
@@ -37,11 +49,10 @@ export default Header;
 
 const MyHeader = styled.header`
   width: 100%;
-  height: 100px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 `;
 
 const Wrapper = styled.div`
-  height: 20px;
   width: 75%;
   margin: 0 auto;
   padding-top: 2rem;
@@ -67,20 +78,65 @@ const SearchBar = styled.div`
     border: none;
   }
   img {
-    width: 3rem;
+    width: 2rem;
   }
 `;
 
 const AvaterShoppingBag = styled.div`
-  display flex;
-  img{
+  display: flex;
+  img {
+    width: 3rem;
+  }
+  img:first-of-type {
     margin-right: 20px;
-    width: 3.5rem;
   }
 `;
 
+const SecondRow = styled(Row)`
+  margin-top: 2.5rem;
+`;
+
 const BrowseCategories = styled.div`
-  width: 100px;
-  height: 10px;
-  background-color: red;
+  background-color: black;
+  display: flex;
+  padding: 1.5rem 2rem;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+
+  img:first-of-type {
+    transform: rotate(180deg);
+    width: 2rem;
+  }
+  img:last-of-type {
+    width: 1.5rem;
+  }
+  p {
+    margin: 0 1.5rem;
+  }
+`;
+
+const Nav = styled.nav`
+  width: 50%;
+  ul {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  a {
+    margin: 0 18px;
+    color: black;
+    font-weight: 700;
+
+    :hover {
+      color: gray;
+      padding-bottom: 1.4rem;
+      border-bottom: solid 4px black;
+    }
+  }
+`;
+const Small = styled.small`
+  a {
+    color: gray;
+  }
 `;
