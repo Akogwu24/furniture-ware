@@ -13,7 +13,7 @@ export default RecentProduct;
 
 const Div = styled.div`
   width: 100%;
-  margin: 10rem auto;
+  margin: 0 auto;
   text-align: center;
 
   h1 {

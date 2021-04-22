@@ -21,25 +21,25 @@ const Banner = () => {
     <Container>
       <Slider {...settings}>
         <Slide backgroundImg={slide1}>
-          <bannerContent>
+          <BannerContent>
             <p>Connect with your roots</p>
             <h1>Dscoer the Newest African Jewely Collection in Stock</h1>
             <a href='/'>Shop Now</a>
-          </bannerContent>
+          </BannerContent>
         </Slide>
         <Slide backgroundImg={slide2}>
-          <bannerContent>
+          <BannerContent>
             <p>Connect with your roots</p>
             <h1>Dscoer the Newest African Jewely Collection in Stock</h1>
             <a href='/'>Shop Now</a>
-          </bannerContent>
+          </BannerContent>
         </Slide>
         <Slide backgroundImg={slide3}>
-          <bannerContent>
+          <BannerContent>
             <p>Connect with your roots</p>
             <h1>Dscoer the Newest African Jewely Collection in Stock</h1>
             <a href='/'>Shop Now</a>
-          </bannerContent>
+          </BannerContent>
         </Slide>
       </Slider>
     </Container>
@@ -64,10 +64,11 @@ const Slide = styled.div`
   color: white;
   display: flex !important; // due to sytles from styles from the slider library
   align-items: center;
-  BannerContent {
-    width: 450px;
-    margin-left: 7.5%;
-  }
+`;
+
+const BannerContent = styled.div`
+  width: 450px;
+  margin-left: 7.5%;
   p {
     font-size: 2rem;
   }

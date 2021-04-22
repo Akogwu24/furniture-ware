@@ -5,10 +5,10 @@ import ProductGrid from '../layout/ProductGrid';
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Banner />
       <ProductGrid />
-    </div>
+    </>
   );
 };
 
