@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Product = () => {
-  return <div></div>;
+  return (
+    <ProductContainer>
+      <img src='' alt='' />
+    </ProductContainer>
+  );
 };
 
 export default Product;
