@@ -9,12 +9,12 @@ import slide3 from '../assets/images/slide3.jpg';
 
 const Banner = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
   };
 
   return (
