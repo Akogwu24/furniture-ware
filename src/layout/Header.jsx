@@ -30,15 +30,15 @@ const Header = () => {
           </BrowseCategories>
           <Nav>
             <ul>
-              <a href='#'>Home</a>
-              <a href='#'>Events</a>
-              <a href='#'>Gallery</a>
-              <a href='#'>Our Services</a>
-              <a href='#'>About Us</a>
+              <a href='/'>Home</a>
+              <a href='/'>Events</a>
+              <a href='/'>Gallery</a>
+              <a href='/'>Our Services</a>
+              <a href='/'>About Us</a>
             </ul>
           </Nav>
           <Small>
-            <a href='#'>Help Center</a>
+            <a href='/'>Help Center</a>
           </Small>
         </SecondRow>
       </Wrapper>
@@ -52,7 +52,7 @@ const MyHeader = styled.header`
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 `;
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   width: 75%;
   margin: 0 auto;
   padding-top: 2rem;

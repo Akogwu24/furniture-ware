@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const RecentProduct = () => {
+const RecentProduct = ({ header, subHeader }) => {
   return (
     <Div>
-      <h1>Recent Products</h1>
-      <p>Add our new arrivals to your weekly lineup</p>
+      <h1>{header}</h1>
+      <p>{subHeader}</p>
     </Div>
   );
 };

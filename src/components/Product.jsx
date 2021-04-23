@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import product1 from '../assets/images/pr1.jpg';
 
 const Product = ({ productImg, productName, productPrice }) => {
   return (

@@ -67,7 +67,7 @@ const Slide = styled.div`
 `;
 
 const BannerContent = styled.div`
-  width: 450px;
+  width: 550px;
   margin-left: 7.5%;
   p {
     font-size: 2rem;
