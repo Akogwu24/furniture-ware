@@ -46,7 +46,7 @@ export default NewArrival;
 
 const NewArrivalContainer = styled.div`
   display: flex;
-  margin: 5rem 0;
+  margin: 5rem 0 20rem;
   justify-content: space-between;
   align-items: center;
 `;
@@ -63,7 +63,7 @@ const Div = styled.div`
     box-shadow: 2px 2px 10px #758b86;
   }
   :hover {
-    transform: rotate(10deg);
+    transform: rotate(15deg);
   }
 `;
 const LongDiv = styled.div`
