@@ -40,7 +40,7 @@ const Container = styled.div`
 const FashionImages = styled.div`
   display: flex;
   width: 100%;
-  margin-bottom: 20rem;
+  margin-bottom: 10rem;
   .col {
     width: 50%;
     height: 500px;

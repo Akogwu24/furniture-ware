@@ -50,7 +50,7 @@ const OfferSectionContainer = styled.div`
   justify-content: space-between;
 `;
 
-const Div = styled.div`
+const Div = styled.section`
   border-bottom: solid 2px rgba(108, 151, 136, 0.226);
   margin-bottom: 10rem;
 `;
