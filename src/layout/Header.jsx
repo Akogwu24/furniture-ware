@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../assets/icons/logo.jpg';
-import searchIcon from '../assets/icons/search.svg';
 import user from '../assets/icons/user.svg';
 import cart from '../assets/icons/shopping-bag.svg';
 import menu from '../assets/icons/menu.svg';
 import dropDownArrow from '../assets/icons/down-arrow.svg';
+import SearchBar from '../components/Search';
 
 const Header = () => {
   return (
@@ -13,10 +13,7 @@ const Header = () => {
       <Wrapper>
         <Row>
           <Logo src={logo} alt='logo' />
-          <SearchBar>
-            <input placeholder='search product here' />
-            <img className='searchIcon' src={searchIcon} alt='search-icon' />
-          </SearchBar>
+          <SearchBar />
           <AvaterShoppingBag>
             <img src={user} alt='user' />
             <img src={cart} alt='user' />
@@ -66,20 +63,6 @@ const Row = styled.div`
 
 const Logo = styled.img`
   width: 5rem;
-`;
-
-const SearchBar = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  input {
-    outline: none;
-    border: none;
-  }
-  img {
-    width: 2rem;
-  }
 `;
 
 const AvaterShoppingBag = styled.div`

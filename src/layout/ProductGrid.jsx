@@ -67,6 +67,7 @@ export default ProductGrid;
 
 const RecentProductSection = styled.section`
   width: 100%;
+  border-bottom: solid 2px rgba(108, 151, 136, 0.226);
 `;
 
 const ProductGridContainer = styled.div`

@@ -19,10 +19,19 @@ export default Offer;
 
 const OfferContainer = styled.div`
   display: flex;
-  /*justify-content: center;*/
   align-items: center;
+  textContainer {
+    width: 170px;
+  }
   img {
     width: 40px;
     margin: 0 5px 10px 0;
+  }
+  h4 {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+  }
+  p {
+    margin-bottom: 1rem;
   }
 `;
