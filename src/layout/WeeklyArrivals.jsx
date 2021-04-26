@@ -16,20 +16,19 @@ const NewArrival = () => {
       <NewArrivalContainer>
         <Div>
           <Product
-            className='baby-img'
             productImg={baby}
             productName="Baby's Collections"
             productPrice={`NGN ${500}`}
           />
         </Div>
-        <Div>
+        <LongDiv className='middle-img'>
           <Product
             className='man-img'
             productImg={man}
             productName="Men's Collection"
             productPrice={`NGN ${2500}`}
           />
-        </Div>
+        </LongDiv>
         <Div>
           <Product
             className='lady-img'
@@ -53,10 +52,30 @@ const NewArrivalContainer = styled.div`
 `;
 
 const Div = styled.div`
-  width: 200px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   background-color: green;
-  .baby-img {
-    height: 500px;
+  transition: all 1s ease-in-out;
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 2px 2px 10px #758b86;
+  }
+  :hover {
+    transform: rotate(10deg);
+  }
+`;
+const LongDiv = styled.div`
+  width: 300px;
+  background-color: red;
+  height: 350px;
+  transition: 0.5s all ease-in-out;
+  img {
+    height: 350px;
+    object-fit: cover;
+  }
+  :hover {
+    transform: scale(1.1);
   }
 `;

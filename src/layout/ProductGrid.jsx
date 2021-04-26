@@ -74,4 +74,8 @@ const ProductGridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 9rem 4rem;
+  img:hover {
+    animation: shakeX;
+    animation-duration: 1.5s;
+  }
 `;
