@@ -5,6 +5,8 @@ import ProductGrid from '../layout/ProductGrid';
 import Header from '../layout/Header';
 import NewArrival from '../layout/WeeklyArrivals';
 import OfferSection from '../layout/OfferSection';
+import Footer from '../layout/Footer';
+
 const Home = () => {
   return (
     <>
@@ -14,6 +16,7 @@ const Home = () => {
       <FashionGrid />
       <NewArrival />
       <OfferSection />
+      <Footer />
     </>
   );
 };
