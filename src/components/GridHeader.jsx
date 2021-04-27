@@ -16,9 +16,6 @@ const Div = styled.div`
   margin: 0 auto;
   text-align: center;
 
-  h1 {
-    font: 700 8rem 'Yanone Kaffeesatz', sans-serif;
-  }
   P {
     color: rgba(0, 0, 0, 0.568);
     font: italic 3rem 'Roboto Condensed', sans-serif;

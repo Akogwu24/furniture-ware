@@ -8,6 +8,10 @@ body {
   font-size: 1.4rem;
   background-color: aliceblue;
 }
+h1 {
+  font: 700 7rem 'Yanone Kaffeesatz', sans-serif;
+}
+
 html {
   font-size: 62.5%;
 }

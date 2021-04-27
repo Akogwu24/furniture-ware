@@ -18,7 +18,7 @@ const NewArrival = () => {
           <Product
             productImg={baby}
             productName="Baby's Collections"
-            productPrice={`NGN ${500}`}
+            // productPrice={`NGN ${500}`}
           />
         </Div>
         <LongDiv className='middle-img'>
@@ -26,7 +26,7 @@ const NewArrival = () => {
             className='man-img'
             productImg={man}
             productName="Men's Collection"
-            productPrice={`NGN ${2500}`}
+            // productPrice={`NGN ${2500}`}
           />
         </LongDiv>
         <Div>
@@ -34,7 +34,7 @@ const NewArrival = () => {
             className='lady-img'
             productImg={lady}
             productName="Women's collection"
-            productPrice={`NGN ${3300}`}
+            // productPrice={`NGN ${3300}`}
           />
         </Div>
       </NewArrivalContainer>
@@ -49,6 +49,8 @@ const NewArrivalContainer = styled.div`
   margin: 5rem 0 20rem;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+  font: oblique 5rem;
 `;
 
 const Div = styled.div`

@@ -64,6 +64,7 @@ const Row = styled.div`
 
 const Logo = styled.img`
   width: 5rem;
+  margin-right: 15%;
 `;
 
 const AvaterShoppingBag = styled.div`
@@ -83,7 +84,7 @@ const SecondRow = styled(Row)`
 const BrowseCategories = styled.div`
   background-color: black;
   display: flex;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1.5rem;
   color: white;
   justify-content: space-between;
   align-items: center;
@@ -102,12 +103,12 @@ const BrowseCategories = styled.div`
     width: 1.5rem;
   }
   p {
-    margin: 0 1.5rem;
+    margin: 0 1rem;
   }
 `;
 
 const Nav = styled.nav`
-  width: 50%;
+  /* width: 50%; */
   ul {
     width: 100%;
     margin: 0 auto;

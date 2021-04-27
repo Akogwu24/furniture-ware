@@ -7,10 +7,10 @@ const Offer = ({ img, attr, offer, paragraph }) => {
       <div>
         <img src={img} alt={attr} />
       </div>
-      <textContainer>
+      <div className='text-container'>
         <h4>{offer}</h4>
         <p>{paragraph}</p>
-      </textContainer>
+      </div>
     </OfferContainer>
   );
 };
@@ -20,7 +20,7 @@ export default Offer;
 const OfferContainer = styled.div`
   display: flex;
   align-items: center;
-  textContainer {
+  .text-container {
     width: 170px;
   }
   img {
