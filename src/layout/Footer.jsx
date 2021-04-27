@@ -69,6 +69,7 @@ const FooterNav = styled.div`
   width: 200px;
   li {
     margin-bottom: 1rem;
+    font-weight: bold;
   }
   a:hover {
     color: gray;

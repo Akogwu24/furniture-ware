@@ -6,6 +6,7 @@ import cart from '../assets/icons/shopping-bag.svg';
 import menu from '../assets/icons/menu.svg';
 import dropDownArrow from '../assets/icons/down-arrow.svg';
 import SearchBar from '../components/Search';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -27,15 +28,15 @@ const Header = () => {
           </BrowseCategories>
           <Nav>
             <ul>
-              <a href='/'>Home</a>
-              <a href='/'>Events</a>
-              <a href='/'>Gallery</a>
-              <a href='/'>Our Services</a>
-              <a href='/'>About Us</a>
+              <Link to='/'>Home</Link>
+              <Link to='/events'>Events</Link>
+              <Link to='/gallery'>Gallery</Link>
+              <Link to='/services'>Our Services</Link>
+              <Link to='/about'>About Us</Link>
             </ul>
           </Nav>
           <Small>
-            <a href='/'>Help Center</a>
+            <Link to='/'>Help Center</Link>
           </Small>
         </SecondRow>
       </Wrapper>
