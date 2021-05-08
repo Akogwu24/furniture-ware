@@ -53,4 +53,6 @@ const OfferSectionContainer = styled.div`
 const Div = styled.section`
   border-bottom: solid 2px rgba(108, 151, 136, 0.226);
   margin-bottom: 10rem;
+  padding-top: 5rem;
+  border-top: solid 2px rgba(108, 151, 136, 0.226);
 `;
