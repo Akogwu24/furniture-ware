@@ -6,12 +6,13 @@ import logo from '../assets/icons/logo.jpg';
 import user from '../assets/icons/user.svg';
 import cart from '../assets/icons/shopping-bag.svg';
 import menu from '../assets/icons/menu.svg';
-import cross from '../assets/icons/cancel.png';
 import dropDownArrow from '../assets/icons/down-arrow.svg';
+import upArrow from '../assets/icons/up-arrow.svg';
 import SearchBar from '../components/Search';
 
 const Header = () => {
   const [click, setClick] = useState(false);
+
   const handleClick = () => {
     setClick(!click);
   };
@@ -28,27 +29,27 @@ const Header = () => {
         </Row>
         <SecondRow>
           <BrowseCategories onClick={handleClick}>
-            {click ? (
-              <img src={menu} alt='hamburger' />
-            ) : (
-              <img src={cross} alt='hamburger-menu' />
-            )}
+            <img src={menu} alt='hamburger' />
             <p>Browse Categories</p>
             {click ? (
               <img src={dropDownArrow} alt='drop-down-arrow' />
             ) : (
-              <img src={dropDownArrow} alt='pull-up-arrow' />
+              <img src={upArrow} alt='pull-up-arrow' />
             )}
           </BrowseCategories>
-          <CartegoryNav>
-            <ul>
-              <Link to='/'>Baby Clothings</Link>
-              <Link to='/events'>Men Collections</Link>
-              <Link to='/gallery'>Women Collections</Link>
-              <Link to='/services'>Electronics</Link>
-              <Link to='/about'>Mobile Accessories</Link>
-            </ul>
-          </CartegoryNav>
+          {click ? (
+            <CartegoryNav>
+              <ul>
+                <Link to='/'>Baby Clothings</Link>
+                <Link to='/events'>Men Collections</Link>
+                <Link to='/gallery'>Women Collections</Link>
+                <Link to='/services'>Electronics</Link>
+                <Link to='/about'>Mobile Accessories</Link>
+              </ul>
+            </CartegoryNav>
+          ) : (
+            ''
+          )}
 
           <Nav>
             <ul>
@@ -114,6 +115,7 @@ const BrowseCategories = styled.div`
   align-items: center;
   cursor: pointer;
   border-radius: 3px;
+  transition: all 0.4s ease-in-out;
 
   :hover {
     background-color: #6d632d;
@@ -140,6 +142,7 @@ const CartegoryNav = styled.nav`
   padding: 1rem 1.15rem 2rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+
   a {
     display: block;
     font: 1.5rem helvetica;
