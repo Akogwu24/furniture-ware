@@ -26,6 +26,12 @@ const OfferContainer = styled.div`
   img {
     width: 40px;
     margin: 0 5px 10px 0;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    :hover {
+      width: 41px;
+      opacity: 0.8;
+    }
   }
   h4 {
     font-weight: bold;
