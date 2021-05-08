@@ -14,11 +14,10 @@ const Product = ({ productImg, productName, productPrice }) => {
 export default Product;
 
 const ProductContainer = styled.div`
-  /* width: 200px; */
   height: 250px;
   background-color: white;
   padding: 10px;
-  /* border-radius: 5px; */
+  border-radius: 3px;
   img {
     max-width: 100%;
     width: 100%;
