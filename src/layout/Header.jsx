@@ -108,7 +108,6 @@ const BrowseCategories = styled.div`
 `;
 
 const Nav = styled.nav`
-  /* width: 50%; */
   ul {
     width: 100%;
     margin: 0 auto;

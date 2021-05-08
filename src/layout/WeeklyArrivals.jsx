@@ -26,7 +26,6 @@ const NewArrival = () => {
             className='man-img'
             productImg={man}
             productName="Men's Collection"
-            // productPrice={`NGN ${2500}`}
           />
         </LongDiv>
         <Div>
@@ -34,7 +33,6 @@ const NewArrival = () => {
             className='lady-img'
             productImg={lady}
             productName="Women's collection"
-            // productPrice={`NGN ${3300}`}
           />
         </Div>
       </NewArrivalContainer>
