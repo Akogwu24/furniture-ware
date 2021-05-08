@@ -3,10 +3,6 @@ import styled from 'styled-components';
 
 import RecentProductGridHeader from '../components/GridHeader';
 import Product from '../components/Product';
-// import product1 from '../assets/images/pr1.jpg';
-// import product2 from '../assets/images/pr2.jpg';
-// import product3 from '../assets/images/pr3.jpg';
-// import product4 from '../assets/images/pr4.jpg';
 import { Wrapper } from './Header';
 
 const ProductGrid = () => {
