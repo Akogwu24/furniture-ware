@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../assets/icons/logo.jpg';
 import user from '../assets/icons/user.svg';
@@ -9,6 +9,10 @@ import SearchBar from '../components/Search';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = () => {
+    setClick(!click);
+  };
   return (
     <MyHeader>
       <Wrapper>
@@ -22,10 +26,26 @@ const Header = () => {
         </Row>
         <SecondRow>
           <BrowseCategories>
-            <img src={menu} alt='hamburger-menu' />
+            <div onClick={handleClick}>
+              {click ? (
+                <img src={menu} alt='hamburger' />
+              ) : (
+                <img src={menu} alt='hamburger-menu' />
+              )}{' '}
+            </div>
             <p>Browse Categories</p>
             <img src={dropDownArrow} alt='drop-down-arrow' />
           </BrowseCategories>
+          <CartegoryNav>
+            <ul>
+              <Link to='/'>Baby Clothings</Link>
+              <Link to='/events'>Men Collections</Link>
+              <Link to='/gallery'>Women Collections</Link>
+              <Link to='/services'>Electronics</Link>
+              <Link to='/about'>Mobile Accessories</Link>
+            </ul>
+          </CartegoryNav>
+
           <Nav>
             <ul>
               <Link to='/'>Home</Link>
@@ -84,7 +104,7 @@ const SecondRow = styled(Row)`
 const BrowseCategories = styled.div`
   background-color: black;
   display: flex;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem;
   color: white;
   justify-content: space-between;
   align-items: center;
@@ -104,6 +124,24 @@ const BrowseCategories = styled.div`
   }
   p {
     margin: 0 1rem;
+  }
+`;
+
+const CartegoryNav = styled.nav`
+  position: absolute;
+  top: 0;
+  transform: translate(0, 142px);
+  z-index: 10;
+  background-color: #201f1f;
+  padding: 1rem 1.15rem 2rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  a {
+    display: block;
+    font: 1.5rem helvetica;
+    margin: 2rem 1.8rem;
+    width: 100%;
+    color: #e2f3f5;
   }
 `;
 
