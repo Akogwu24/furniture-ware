@@ -15,11 +15,7 @@ const NewArrival = () => {
       />
       <NewArrivalContainer>
         <Div>
-          <Product
-            productImg={baby}
-            productName="Baby's Collections"
-            // productPrice={`NGN ${500}`}
-          />
+          <Product productImg={baby} productName="Baby's Collections" />
         </Div>
         <LongDiv className='middle-img'>
           <Product
@@ -54,11 +50,13 @@ const NewArrivalContainer = styled.div`
 const Div = styled.div`
   width: 300px;
   height: 300px;
-  background-color: green;
+  padding: 0;
   transition: all 1s ease-in-out;
   img {
     width: 100%;
     height: 300px;
+    padding: 0;
+    border-radius: 0;
     object-fit: cover;
     box-shadow: 2px 2px 10px #758b86;
   }
@@ -68,11 +66,12 @@ const Div = styled.div`
 `;
 const LongDiv = styled.div`
   width: 300px;
-  background-color: red;
   height: 350px;
   transition: 0.5s all ease-in-out;
   img {
     height: 350px;
+    padding: 0;
+    border-radius: 0;
     object-fit: cover;
   }
   :hover {

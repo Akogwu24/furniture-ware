@@ -11,6 +11,9 @@ body {
 h1 {
   font: 700 7rem 'Yanone Kaffeesatz', sans-serif;
 }
+p {
+  font-style: italic;
+}
 
 html {
   font-size: 62.5%;

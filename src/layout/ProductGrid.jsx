@@ -27,7 +27,7 @@ const ProductGrid = () => {
   useEffect(() => {
     getPhotos();
   }, []);
-  console.log(productItems[0].title);
+
   // console.log('this is the productItems', productItems);
   return (
     <RecentProductSection>
@@ -62,7 +62,7 @@ const RecentProductSection = styled.section`
 `;
 
 const ProductGridContainer = styled.div`
-  margin: 5rem auto;
+  margin: 10rem auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 9rem 4rem;
