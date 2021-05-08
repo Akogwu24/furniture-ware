@@ -16,7 +16,6 @@ const ProductGrid = () => {
       .then((data) => {
         const productData = data.slice(0, 12);
         setProductItems(productData);
-
         setIsLoading(false);
       });
   };
@@ -33,7 +32,7 @@ const ProductGrid = () => {
           subHeader='Add our new arrivals to your weekly lineup'
         />
         <ProductGridContainer>
-          {isLoading && <p>Loading Data........</p>}
+          {isLoading && <p>Wait Loading Products........</p>}
           {productItems.map((productItem) => (
             <Product
               key={productItem.id}
@@ -42,6 +41,7 @@ const ProductGrid = () => {
                 productItem.title.split(' ')[1]
               }`}
               productPrice={productItem.price}
+              currency='NGN'
             />
           ))}
         </ProductGridContainer>
@@ -60,6 +60,7 @@ const RecentProductSection = styled.section`
 const ProductGridContainer = styled.div`
   margin: 10rem auto;
   display: grid;
+  text-align: center;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 9rem 4rem;
   img:hover {

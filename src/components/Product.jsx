@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Product = ({ productImg, productName, productPrice }) => {
+const Product = ({ productImg, productName, productPrice, currency }) => {
   return (
     <ProductContainer>
       <img src={productImg} alt='Lamp' />
       <p>{productName}</p>
-      <p>{productPrice}</p>
+      <p>
+        {currency} {productPrice}
+      </p>
     </ProductContainer>
   );
 };
