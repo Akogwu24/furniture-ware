@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
 import logo from '../assets/icons/logo.jpg';
 import user from '../assets/icons/user.svg';
 import cart from '../assets/icons/shopping-bag.svg';
 import menu from '../assets/icons/menu.svg';
+import cross from '../assets/icons/cancel.png';
 import dropDownArrow from '../assets/icons/down-arrow.svg';
 import SearchBar from '../components/Search';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -25,16 +27,18 @@ const Header = () => {
           </AvaterShoppingBag>
         </Row>
         <SecondRow>
-          <BrowseCategories>
-            <div onClick={handleClick}>
-              {click ? (
-                <img src={menu} alt='hamburger' />
-              ) : (
-                <img src={menu} alt='hamburger-menu' />
-              )}{' '}
-            </div>
+          <BrowseCategories onClick={handleClick}>
+            {click ? (
+              <img src={menu} alt='hamburger' />
+            ) : (
+              <img src={cross} alt='hamburger-menu' />
+            )}
             <p>Browse Categories</p>
-            <img src={dropDownArrow} alt='drop-down-arrow' />
+            {click ? (
+              <img src={dropDownArrow} alt='drop-down-arrow' />
+            ) : (
+              <img src={dropDownArrow} alt='pull-up-arrow' />
+            )}
           </BrowseCategories>
           <CartegoryNav>
             <ul>
