@@ -2,8 +2,9 @@ import React from 'react';
 
 const Gallery = () => {
   return (
-    <div>
-      <h1>Gallery</h1>
+    <div Align='center'>
+      <h1>Gallery page</h1>
+      <p>Waiting For Holy Spirit to intervene😵</p>
     </div>
   );
 };

@@ -2,8 +2,9 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div>
-      <h1>About Us</h1>
+    <div Align='center'>
+      <h1>About page</h1>
+      <p>Waiting For Holy Spirit to intervene😵</p>
     </div>
   );
 };

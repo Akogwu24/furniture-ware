@@ -2,8 +2,9 @@ import React from 'react';
 
 const Services = () => {
   return (
-    <div>
-      <h1>Our Services</h1>
+    <div Align='center'>
+      <h1>Services page</h1>
+      <p>Waiting For Holy Spirit to intervene😵</p>
     </div>
   );
 };
