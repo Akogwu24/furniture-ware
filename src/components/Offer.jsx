@@ -29,8 +29,8 @@ const OfferContainer = styled.div`
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     :hover {
-      width: 41px;
-      opacity: 0.8;
+      width: 40.5px;
+      opacity: 0.6;
     }
   }
   h4 {
