@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -12,23 +12,29 @@ import SearchBar from '../components/Search';
 
 const Header = () => {
   const [click, setClick] = useState(false);
+  const [displayValue, setDisplayValue] = useState('');
 
-  const handleClick = () => {
-    setClick(!click);
-  };
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      console.log(window.innerWidth);
+      if (window.innerWidth < 620) {
+        setDisplayValue('none');
+      }
+    });
+  }, []);
   return (
     <MyHeader>
       <Wrapper>
         <Row>
           <Logo src={logo} alt='logo' />
-          <SearchBar />
+          <SearchBar width='150%' display={displayValue} />
           <AvaterShoppingBag>
             <img src={user} alt='user' />
             <img src={cart} alt='user' />
           </AvaterShoppingBag>
         </Row>
         <SecondRow>
-          <BrowseCategories onClick={handleClick}>
+          <BrowseCategories onClick={() => setClick(!click)}>
             <img src={menu} alt='hamburger' />
             <p>Browse Categories</p>
             {click ? (
@@ -37,8 +43,15 @@ const Header = () => {
               <img src={upArrow} alt='pull-up-arrow' />
             )}
           </BrowseCategories>
-          {click ? (
+          {click && (
             <CartegoryNav>
+              <ul>
+                <Link to='/'>Home</Link>
+                <Link to='/events'>Events</Link>
+                <Link to='/gallery'>Gallery</Link>
+                <Link to='/services'>Our Services</Link>
+                <Link to='/about'>About Us</Link>
+              </ul>
               <ul>
                 <Link to='/'>Baby Clothings</Link>
                 <Link to='/events'>Men Collections</Link>
@@ -47,8 +60,6 @@ const Header = () => {
                 <Link to='/about'>Mobile Accessories</Link>
               </ul>
             </CartegoryNav>
-          ) : (
-            ''
           )}
 
           <Nav>
@@ -79,17 +90,25 @@ export const Wrapper = styled.div`
   width: 75%;
   margin: 0 auto;
   padding-top: 2rem;
+  @media (max-width: 920px) {
+    width: 90%;
+  }
 `;
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 620px) {
+  }
 `;
 
 const Logo = styled.img`
   width: 5rem;
   margin-right: 15%;
+  @media (max-width: 900px) {
+    margin-right: 0;
+  }
 `;
 
 const AvaterShoppingBag = styled.div`
@@ -134,12 +153,13 @@ const BrowseCategories = styled.div`
 `;
 
 const CartegoryNav = styled.nav`
-  position: absolute;
+  position: fixed;
   top: 0;
-  transform: translate(0, 142px);
+  left: 0;
+  transform: translate(103%, 34%);
   z-index: 10;
-  background-color: #201f1f;
-  padding: 1rem 1.15rem 2rem;
+  background-color: #0f0f0f;
+  padding: 1rem 2rem 2rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 
@@ -156,6 +176,9 @@ const Nav = styled.nav`
   ul {
     width: 100%;
     margin: 0 auto;
+  }
+  @media (max-width: 760px) {
+    display: none;
   }
 
   a {

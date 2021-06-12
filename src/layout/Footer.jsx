@@ -8,7 +8,7 @@ const Footer = () => {
     <FooterSection>
       <Wrapper>
         <FooterContainer>
-          <SearchBar />
+          <SearchBar width='150%' />
           <FooterNav>
             <ul>
               <li>
@@ -67,6 +67,7 @@ const FooterNav = styled.div`
   display: flex;
   justify-content: space-between;
   width: 200px;
+
   li {
     margin-bottom: 1rem;
     font-weight: bold;

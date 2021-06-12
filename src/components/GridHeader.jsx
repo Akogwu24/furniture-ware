@@ -20,4 +20,12 @@ const Div = styled.div`
     color: rgba(0, 0, 0, 0.568);
     font: italic 3rem 'Roboto Condensed', sans-serif;
   }
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 5rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
 `;

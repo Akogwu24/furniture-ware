@@ -60,4 +60,7 @@ const FashionImages = styled.div`
   .long-img {
     height: 100%;
   }
+  .short-img {
+    height: 100%;
+  }
 `;

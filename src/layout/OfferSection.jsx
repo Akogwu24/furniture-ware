@@ -48,6 +48,14 @@ const OfferSectionContainer = styled.div`
   margin-bottom: 5rem;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between; */
+
+  @media (max-width: 980px) {
+  }
 `;
 
 const Div = styled.section`

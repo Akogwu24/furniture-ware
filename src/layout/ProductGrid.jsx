@@ -23,7 +23,6 @@ const ProductGrid = () => {
     getPhotos();
   }, []);
 
-  // console.log('this is the productItems', productItems);
   return (
     <RecentProductSection>
       <Wrapper>
@@ -33,7 +32,7 @@ const ProductGrid = () => {
         />
         <ProductGridContainer>
           {isLoading && <p>Wait Loading Products........</p>}
-          {productItems.map((productItem) => (
+          {productItems?.map((productItem) => (
             <Product
               key={productItem.id}
               productImg={productItem.image}
@@ -66,5 +65,12 @@ const ProductGridContainer = styled.div`
   img:hover {
     animation: shakeX;
     animation-duration: 1.5s;
+  }
+  @media (max-width: 760px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;

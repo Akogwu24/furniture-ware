@@ -39,5 +39,6 @@ const OfferContainer = styled.div`
   }
   p {
     margin-bottom: 1rem;
+    font-size: 1.2rem;
   }
 `;
