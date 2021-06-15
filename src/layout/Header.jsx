@@ -15,12 +15,9 @@ const Header = () => {
   const [displayValue, setDisplayValue] = useState('');
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      console.log(window.innerWidth);
-      if (window.innerWidth < 620) {
-        setDisplayValue('none');
-      }
-    });
+    if (window.innerWidth < 620) {
+      setDisplayValue('none');
+    }
   }, []);
   return (
     <MyHeader>
