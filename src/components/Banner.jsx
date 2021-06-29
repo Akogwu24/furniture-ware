@@ -91,4 +91,13 @@ const BannerContent = styled.div`
       background-color: #dfdbc9;
     }
   }
+  @media (max-width: 490px) {
+    text-align: center;
+    p {
+      font-size: 1.5rem;
+    }
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
 `;

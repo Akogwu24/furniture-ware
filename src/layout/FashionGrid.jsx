@@ -13,16 +13,20 @@ const FashionGrid = () => {
         <GridHeader header='Fashion' subHeader='Glamourous and Spicy styling' />
       </Container>
       <FashionImages>
-        <div className='col'>
+        <div className='col long-fashion'>
           <img className='long-img' src={longImg} alt='model' />
         </div>
-        <div className='col' style={{ marginLeft: '1rem' }}>
+        <div className='col'>
           <div
+            className='short-img1-container'
             style={{ overflow: 'hidden', height: '50%', marginBottom: '1rem' }}
           >
             <img className='short-img1 short-img' src={short1} alt='model' />
           </div>
-          <div style={{ overflow: 'hidden', height: '50%' }}>
+          <div
+            className='short-img2-container'
+            style={{ overflow: 'hidden', height: '50%' }}
+          >
             <img className='short-img2 short-img' src={short2} alt='model' />
           </div>
         </div>
@@ -41,10 +45,18 @@ const FashionImages = styled.div`
   display: flex;
   width: 100%;
   margin-bottom: 10rem;
+
   .col {
     width: 50%;
     height: 500px;
     overflow: hidden;
+    margin-left: 1rem;
+    @media (max-width: 450px) {
+      width: 90%;
+      margin-left: 0;
+      margin: 0 auto;
+      height: 700px;
+    }
   }
 
   img {
@@ -52,6 +64,8 @@ const FashionImages = styled.div`
     object-fit: cover;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
+    @media (max-width: 400px) {
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -60,6 +74,7 @@ const FashionImages = styled.div`
   .long-img {
     height: 100%;
   }
+
   .short-img {
     height: 100%;
   }

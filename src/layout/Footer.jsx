@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Wrapper } from './Header';
 import styled from 'styled-components';
 import SearchBar from '../components/Search';
 
 const Footer = () => {
+  const [searbarWidth, setSearchbarWidth] = useState('150%');
+  useEffect(() => {
+    if (window.innerWidth < 500) {
+      setSearchbarWidth('80%');
+    }
+  }, []);
   return (
     <FooterSection>
       <Wrapper>
         <FooterContainer>
-          <SearchBar width='150%' />
+          <SearchBar width={searbarWidth} />
           <FooterNav>
             <ul>
               <li>
@@ -61,12 +67,17 @@ const FooterSection = styled.footer`
 const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 const FooterNav = styled.div`
   display: flex;
   justify-content: space-between;
   width: 200px;
+  margin: 0 auto;
 
   li {
     margin-bottom: 1rem;
@@ -74,5 +85,8 @@ const FooterNav = styled.div`
   }
   a:hover {
     color: gray;
+  }
+  @media (max-width: 400px) {
+    margin-top: 3rem;
   }
 `;

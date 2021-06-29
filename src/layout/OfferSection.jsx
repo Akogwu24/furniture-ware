@@ -46,15 +46,23 @@ export default OfferSection;
 
 const OfferSectionContainer = styled.div`
   margin-bottom: 5rem;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
 
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-content: space-between; */
+  grid-template-rows: auto;
+  justify-content: space-between;
 
   @media (max-width: 980px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+  }
+  @media (max-width: 400px) {
+    grid-template-columns: auto;
+    justify-content: center;
   }
 `;
 
@@ -63,4 +71,8 @@ const Div = styled.section`
   margin-bottom: 10rem;
   padding-top: 5rem;
   border-top: solid 2px rgba(108, 151, 136, 0.226);
+  @media (max-width: 400px) {
+    padding-top: 0;
+    margin-bottom: 3rem;
+  }
 `;

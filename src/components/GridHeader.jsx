@@ -28,4 +28,12 @@ const Div = styled.div`
       font-size: 2rem;
     }
   }
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
 `;

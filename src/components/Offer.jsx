@@ -41,4 +41,12 @@ const OfferContainer = styled.div`
     margin-bottom: 1rem;
     font-size: 1.2rem;
   }
+  @media (max-width: 400px) {
+    margin-top: 3rem;
+    padding-top: 0;
+    justify-content: space-between;
+    .text-container {
+      /* width: 100%; */
+    }
+  }
 `;

@@ -120,6 +120,9 @@ const AvaterShoppingBag = styled.div`
 
 const SecondRow = styled(Row)`
   margin-top: 2.5rem;
+  position: relative;
+  top: 0;
+  left: 0;
 `;
 
 const BrowseCategories = styled.div`
@@ -147,13 +150,16 @@ const BrowseCategories = styled.div`
   p {
     margin: 0 1rem;
   }
+  @media (max-width: 300px) {
+    padding: 1rem;
+  }
 `;
 
 const CartegoryNav = styled.nav`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  transform: translate(103%, 34%);
+  transform: translate(-0.2%, 11%);
   z-index: 10;
   background-color: #0f0f0f;
   padding: 1rem 2rem 2rem;
@@ -163,9 +169,13 @@ const CartegoryNav = styled.nav`
   a {
     display: block;
     font: 1.5rem helvetica;
-    margin: 2rem 1.8rem;
+    margin: 2rem 1rem;
     width: 100%;
     color: #e2f3f5;
+  }
+  @media (max-width: 300px) {
+    transform: translate(-0.2%, 9.5%);
+    padding: 1rem 1.5rem 2rem;
   }
 `;
 

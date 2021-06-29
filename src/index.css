@@ -25,3 +25,9 @@ a {
 .middle-img {
   height: 450px;
 }
+
+@media (max-width: 450px) {
+  .long-fashion {
+    display: none;
+  }
+}

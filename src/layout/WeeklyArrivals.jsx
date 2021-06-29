@@ -45,6 +45,10 @@ const NewArrivalContainer = styled.div`
   align-items: center;
   text-align: center;
   font: oblique 5rem;
+  @media (max-width: 450px) {
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
 `;
 
 const Div = styled.div`
@@ -63,11 +67,16 @@ const Div = styled.div`
   :hover {
     transform: rotate(15deg);
   }
+  @media (max-width: 400px) {
+    :hover {
+      transform: rotateY(360deg);
+    }
+  }
 `;
 const LongDiv = styled.div`
   width: 300px;
   height: 350px;
-  transition: 0.5s all ease-in-out;
+  transition: 0.7s all ease-in-out;
   img {
     height: 350px;
     padding: 0;
@@ -76,5 +85,11 @@ const LongDiv = styled.div`
   }
   :hover {
     transform: scale(1.1);
+  }
+  @media (max-width: 450px) {
+    margin: 8rem 0 8rem 0;
+    :hover {
+      transform: rotateY(360deg);
+    }
   }
 `;
