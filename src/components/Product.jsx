@@ -34,4 +34,8 @@ const ProductContainer = styled.div`
     margin-top: 1rem;
     font-weight: 700;
   }
+
+  @media (max-width: 450px) {
+    height: 300px;
+  }
 `;

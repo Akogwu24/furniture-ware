@@ -66,15 +66,16 @@ const ProductGridContainer = styled.div`
     animation: shakeX;
     animation-duration: 1.5s;
   }
-  @media (max-width: 760px) {
+  @media (max-width: 920px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 450px) {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0 20px;
   }
 `;
