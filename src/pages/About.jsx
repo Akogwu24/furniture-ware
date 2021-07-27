@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div Align='center'>
       <h1>About page</h1>
-      <p>Waiting For Holy Spirit to intervene😵</p>
+      <p>in progress</p>
     </div>
   );
 };

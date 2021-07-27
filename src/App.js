@@ -14,7 +14,7 @@ function App() {
           <Route exact path='/'>
             <Home />
           </Route>
-          {/* <Route exact path='/events'>
+          <Route exact path='/events'>
             <Events />
           </Route>
           <Route exact path='/gallery'>
@@ -25,7 +25,7 @@ function App() {
           </Route>
           <Route exact path='/about'>
             <About />
-          </Route> */}
+          </Route>
         </Switch>
       </Router>
     </div>
